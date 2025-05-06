@@ -480,6 +480,7 @@ html {
 @media (max-width: 768px) {
     header{
         position: relative;
+        opacity: 50&;
     }
 
     .header-style {
