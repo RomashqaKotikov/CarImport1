@@ -498,6 +498,10 @@ html {
         gap: 15px;
     }
 
+    #scrollToTopBtn.visible{
+        display: none;
+    }
+
     .hero{
         display: none;
     }
