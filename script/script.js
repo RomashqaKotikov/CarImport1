@@ -1,5 +1,30 @@
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+function smoothScrollToBottom() {
+    const scrollDuration = 600;
+    const targetPosition = document.body.scrollHeight - window.innerHeight;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const scrollStep = distance / (scrollDuration / 15);
+    const scrollInterval = setInterval(function() {
+        const currentPosition = window.scrollY;
+        if (currentPosition < targetPosition) {
+            window.scrollBy(0, scrollStep);
+        } else {
+            window.scrollTo(0, targetPosition); // На случай если мы перескочили
+            clearInterval(scrollInterval);
+        }
+    }, 15);
+}
 
+
+
+
+
+
+document.getElementById('send').addEventListener('click', () => {
+    smoothScrollToBottom();
+});
+
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 window.onscroll = function() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -9,10 +34,10 @@ window.onscroll = function() {
     }
 };
 
-
 scrollToTopBtn.addEventListener('click', function() {
     smoothScrollToTop();
 });
+
 
 
 function smoothScrollToTop() {
