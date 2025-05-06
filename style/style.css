@@ -480,12 +480,13 @@ html {
 @media (max-width: 768px) {
     header{
         position: relative;
-        opacity: 50%;
+        
     }
 
     .header-style {
         flex-direction: column;
         text-align: center;
+        opacity: 50%;
     }
 
     .logo {
