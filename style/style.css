@@ -486,7 +486,7 @@ html {
     .header-style {
         flex-direction: column;
         text-align: center;
-        opacity: 50%;
+        opacity: 65%;
     }
 
     .logo {
