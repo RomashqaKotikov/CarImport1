@@ -1,0 +1,598 @@
+@font-face {
+    font-family: Avenir;
+    src: url(../fonts/Avenir\ Next\ W1G\ Light.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Avenir, arial, sans-serif;
+    box-sizing: border-box;
+    max-height: auto;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+}
+
+section{
+    background-color: #f9f9f9;
+}
+
+.header-style{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(207, 0, 0);
+    margin-left: 100px;
+}
+
+.logo span{
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    margin-right: 200px;
+}
+
+nav ul a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul a:hover{
+    color: rgb(207, 0, 0);
+    transition:all 0.3s;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/hero-fon.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background: #e60000;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #b30000;
+}
+
+.about {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #e60000;
+}
+
+.about-text p{
+    margin-top: 20px;
+}
+
+.about-text button{
+    margin-top: 40px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services {
+    padding: 80px 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #e60000;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.cars {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.cars h2{
+    text-align: center;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.car-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.car-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.car-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.car-card:hover .car-image img {
+    transform: scale(1.1);
+}
+
+.car-info {
+    padding: 20px;
+}
+
+.car-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.car-info p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.car-price {
+    font-weight: bold;
+    color: #e60000;
+    font-size: 18px;
+}
+
+#contact{
+    text-align: center;
+}
+
+#contact h2{
+    color: rgb(207, 0, 0);
+    font-size: 36px;
+}
+
+#contact p{
+    font-size: 22px;
+}
+
+#contact ul{
+    gap: 5px;
+    display: grid;
+    margin-top: 5px;
+}
+
+form{
+    width: 100%;
+    padding: 20px;
+}
+
+form h3{
+    color: rgb(207, 0, 0);
+    font-size: 24px;
+}
+
+form label{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+}
+
+form input{
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    width: 25%;
+    color: black;
+}
+
+form input, label{
+    margin-top: 15px;
+}
+
+form button{
+    width: 10%;
+    background-color: rgb(207, 0, 0);
+    margin-top: 15px;
+    border-radius: 25px;
+    height: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+footer{
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-style{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.footer-style p{
+    margin-right: 200px;
+}
+
+
+
+
+#scrollToTopBtn {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgb(0, 0, 0, 0.8);
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #333;
+}
+
+#scrollToTopBtn.visible {
+    display: block;
+    opacity: 1;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.alert-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.alert-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.alert-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.alert-content button {
+    display: inline-block;
+    background: #e60000;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.alert-content button:hover {
+    background-color: #b30000;
+}
+
+.ord-alert {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.ord-alert-content {
+    position: relative;
+    background-color: white;
+    padding: 25px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.ord-alert-content input {
+    margin-bottom: 10px;
+    color: black;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.ord-alert-content #ordAlertBtn {
+    display: inline-block;
+    background: #e60000;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.ord-alert-content #ordAlertBtn:hover {
+    background-color: #b30000;
+}
+
+.ord-alert-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    color: #000; 
+}
+
+.ord-alert-close:hover {
+    color: #666; 
+}
+
+@media (max-width: 768px) {
+    header{
+        position: relative;
+    }
+
+    .header-style {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    nav ul {
+        margin-right: 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero{
+        display: none;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-text, .about-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form input {
+        width: 80%;
+    }
+
+    form button {
+        width: 50%;
+    }
+
+    .footer-style {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-style p {
+        margin-right: 0;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        padding: 0 20px;
+    }
+
+    .hero {
+        padding-top: 100px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about, .services, .cars {
+        padding: 50px 0;
+    }
+
+    .alert-content, .ord-alert-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #contact p {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+
+    #contact h2 {
+        font-size: 28px;
+    }
+
+    form h3 {
+        font-size: 20px;
+    }
+
+    form label {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .service-card, .car-card {
+        padding: 20px;
+    }
+
+    .ord-alert-content, .alert-content {
+        padding: 15px;
+    }
+}
